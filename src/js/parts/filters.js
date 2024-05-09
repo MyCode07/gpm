@@ -16,6 +16,7 @@ document.addEventListener('click', function (e) {
     }
 
 
+
     if ((targetEl.closest('.select-body') || targetEl.closest('.select-input')) && targetEl.hasAttribute('data-id')) {
         const select = targetEl.closest('.select-input');
         const label = select.querySelector('label')
@@ -23,6 +24,9 @@ document.addEventListener('click', function (e) {
         label.textContent = targetEl.textContent
         label.dataset.id = targetEl.dataset.id
         select.classList.remove('_active')
+
+        targetEl.classList.add('_active')
+
     }
 
     if (!targetEl.classList.contains('select-input') && !targetEl.closest('.select-input') && document.querySelector('.select-input._active')) {
@@ -34,9 +38,18 @@ document.addEventListener('click', function (e) {
         filter.classList.add('_open')
         lockPadding();
     }
-    
+
     if (targetEl.hasAttribute('data-close-filter')) {
+
         filter.classList.remove('_open')
         unLockPadding();
     }
+})
+
+const filtersMoreBtn = document.querySelector('._more');
+const filtersGrid = document.querySelector('.filters-area .grid');
+
+filtersMoreBtn.addEventListener("click", (e) => {
+    filtersGrid.classList.toggle("_active")
+    filtersMoreBtn.textContent = "Свернуть"
 })

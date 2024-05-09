@@ -1,0 +1,230 @@
+.product-card {
+    padding: 36px 10px 30px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease 0s;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+        padding: 16px 16px 30px;
+    }
+
+    @media (max-width: 425px) {
+        width: 285px;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 5px 30px 10px rgba(195, 195, 195, 0.25);
+        }
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    // .product-card__image
+
+    &__image {
+        width: 100%;
+        height: 208px;
+        margin-bottom: 26px;
+        position: relative;
+
+        @media (max-width: 768px) {
+            height: 164px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    label {
+        color: #4a4646;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.2;
+        display: block;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    // .product-card__pricebox
+
+    &__pricebox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 5px;
+        padding-bottom: 27px;
+        margin-bottom: 34px;
+        position: relative;
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+            padding-bottom: 0;
+        }
+
+        @media (min-width: 769px) {
+            &:after {
+                position: absolute;
+                content: "";
+                left: 50%;
+                transform: translate(-50%, 0);
+                bottom: 0;
+                width: 100vw;
+                height: 1px;
+                background-color: #dbdbdb;
+            }
+        }
+
+        label {
+            margin-bottom: 13px;
+        }
+
+        span {
+            color: $accent;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.1;
+
+            @media (max-width: 768px) {
+                font-size: 17px;
+            }
+        }
+    }
+
+    ol {
+        margin-bottom: 23px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 5px;
+
+        @media (max-width: 768px) {
+            gap: 17px 0;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        span {
+            color: #000;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.1%;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    ._btn {
+        margin-top: auto;
+        width: 100%;
+    }
+}
+
+.service-card {
+    border: 1px solid #dbdbdb;
+
+    // .service-card__img
+
+    &__img {
+        display: block;
+        @include adaptive-value("height", 210, 174, 1);
+
+        width: 100%;
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+        }
+    }
+
+    // .service-card__info
+
+    &__info {
+        padding: 0 25px 30px 25px;
+
+        @media (max-width: 768px) {
+            padding-bottom: 0 25px 25px 25px;
+        }
+    }
+
+    h3 {
+        color: #080808;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-top: 30px;
+        margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    ._btn {
+        width: 100%;
+    }
+}
+
+.news-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    time {
+        display: block;
+        margin-bottom: 20px;
+        color: #4a4646;
+        @include adaptive-value("font-size", 17, 12, 1);
+        font-style: normal;
+        font-weight: 600;
+        width: fit-content;
+    }
+
+    // .news-card__name
+
+    &__name {
+        margin-bottom: 50px;
+        flex: 1 1 auto;
+        color: #000;
+        @include adaptive-value("font-size", 24, 16, 1);
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    ._btn {
+        max-width: 195px;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            max-width: 125px;
+        }
+    }
+}
