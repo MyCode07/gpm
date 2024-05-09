@@ -48,8 +48,9 @@ document.addEventListener('click', function (e) {
 
 const filtersMoreBtn = document.querySelector('._more');
 const filtersGrid = document.querySelector('.filters-area .grid');
-
-filtersMoreBtn.addEventListener("click", (e) => {
-    filtersGrid.classList.toggle("_active")
-    filtersMoreBtn.textContent = "Свернуть"
-})
+if (filtersMoreBtn) {
+    filtersMoreBtn.addEventListener("click", (e) => {
+        filtersGrid.classList.toggle("_active")
+        filtersMoreBtn.textContent = "Свернуть"
+    })
+}

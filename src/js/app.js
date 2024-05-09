@@ -15,9 +15,9 @@ import "./parts/tabs.js";
 
 // maskInputs('+7 (999) 999-99-99', '._mask-phone')
 
-// import { Fancybox } from "@fancyapps/ui";
-// Fancybox.bind("[data-fancybox]", {
-// });
+import { Fancybox } from "@fancyapps/ui";
+ Fancybox.bind("[data-fancybox]", {
+});
 
 // const inputItems = [...document.querySelectorAll('input ')].concat([...document.querySelectorAll('textarea ')])
 // if (inputItems.length) {

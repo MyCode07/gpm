@@ -2,7 +2,7 @@
     position: relative;
     color: #fff;
     margin-bottom: 48px;
-    
+
     @media (max-width: 1024px) {
         margin-bottom: 0;
     }
@@ -177,5 +177,13 @@
         }
     }
 }
-._video {
+
+.pages-hero {
+    padding-top: 102px;
+    @include adaptive-value("margin-bottom", 50, 20, 1);
+
+    h1 {
+        color: $black;
+        text-align: left;
+    }
 }
