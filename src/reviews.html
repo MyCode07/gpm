@@ -1,0 +1,132 @@
+@@include('./html/head.html', {
+"title":"Отзывы",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="section pages-hero">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Главная</span>
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>О компании</span>
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>Отзывы</span>
+                        </li>
+                    </ul>
+                </div>
+                <h1>Отзывы</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="reviews-form">
+                    <h3>Добавить отзыв</h3>
+                    <form action="" method="post" role="form" class="form">
+                        <div class="form__item" data-required="">
+                            <label>Имя <span>*</span></label>
+                            <input type="text" name="name" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form__item" data-required="">
+                            <label>Оставить отзыв<span>*</span></label>
+                            <textarea name="message" placeholder="Ваш отзыв"></textarea>
+                        </div>
+
+                        <div class="form__item form__item-select">
+                            <label>Оценка</label>
+                            <div class="select-input">
+                                <label data-id="1">1</label>
+                                <svg width="10" height="6" viewBox="0 0 10 6">
+                                    <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                </svg>
+                                <div class="select">
+                                    <div class="select-body">
+                                        <span data-id="0">0</span>
+                                        <span data-id="1" class="_active">1</span>
+                                        <span data-id="2">2</span>
+                                        <span data-id="3">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__bottom">
+                            <button class="_btn _btn-red">
+                                <div>Сохранить</div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="reviews-card">
+                    <h3>Сергей Николаевич</h3>
+                    <time>19.05.2015</time>
+                    <div>
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                    </div>
+                    <p>Большое спасибо сотрудникам компании! Я строю загородный дом, понадобилось перевезти большой
+                        объем кирпича (в поддонах).
+                        Компанию ГПММОСКВА нашел в интернете случайно, отзывы убедили. В общем, не пожалел: машину дали
+                        хорошую, водитель
+                        местный, знает Москву. Приехал быстро, приступил к работе сразу. Стрелой управлял уверенно –
+                        чувствуется опыт. Я приятно
+                        удивлен, так как весь объем работ (а было 3 захода по 8 тонн) занял намного меньше времени, чем
+                        ожидал. Скоро буду
+                        делать крышу, воспользуюсь услугами ГПММОСКВА снова! Да и соседу, который тоже строится, вас
+                        посоветовал.</p>
+                </div>
+                <div class="reviews-card">
+                    <h3>Сергей Николаевич</h3>
+                    <time>19.05.2015</time>
+                    <div>
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                        <img src="img/icons/star.svg" alt="">
+                    </div>
+                    <p>Большое спасибо сотрудникам компании! Я строю загородный дом, понадобилось перевезти большой
+                        объем кирпича (в поддонах).
+                        Компанию ГПММОСКВА нашел в интернете случайно, отзывы убедили. В общем, не пожалел: машину дали
+                        хорошую, водитель
+                        местный, знает Москву. Приехал быстро, приступил к работе сразу. Стрелой управлял уверенно –
+                        чувствуется опыт. Я приятно
+                        удивлен, так как весь объем работ (а было 3 захода по 8 тонн) занял намного меньше времени, чем
+                        ожидал. Скоро буду
+                        делать крышу, воспользуюсь услугами ГПММОСКВА снова! Да и соседу, который тоже строится, вас
+                        посоветовал.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

@@ -95,6 +95,10 @@ h3 {
     }
 }
 
+h4 {
+    @include adaptive-value("font-size", 22, 16, 1);
+}
+
 .breadcrumbs {
     margin-bottom: 30px;
 
@@ -266,21 +270,66 @@ table {
     min-width: 612px;
 
     th {
-        color: #fff;
+        color: $gray;
         text-align: center;
         font-size: 18px;
         font-weight: 400;
-        background-color: #ae1b24;
-        height: 54px;
-        white-space: nowrap;
+        min-height: 54px;
+        padding: 5px;
+
+        background-color: #f4f1f1;
 
         @media (max-width: 768px) {
-            height: 33px;
+            min-height: 33px;
             font-size: 10px;
         }
     }
 
+    ._accent-bg {
+        background-color: #ae1b24;
+        color: $white;
+
+        th {
+            background-color: unset;
+            color: $white;
+            height: 37px;
+        }
+    }
+
     td {
+        min-width: 162px;
+        div {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            div {
+                flex: 0 0 auto;
+                width: 68px;
+                height: 50px;
+                position: relative;
+
+                @media (max-width: 768px) {
+                    width: 57px;
+                    height: 43px;
+                }
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .accent {
+                white-space: nowrap;
+                text-align: left;
+                @include adaptive-value("font-size", 18, 14, 1);
+            }
+        }
+
         text-align: center;
         padding: 12px;
         border: 1px solid #e9e9e9;
@@ -295,7 +344,7 @@ table {
             font-size: 12px;
         }
 
-        &.accent {
+        .accent {
             color: $accent;
             font-weight: 600;
             max-width: 230px;
@@ -375,5 +424,202 @@ table {
                 border-bottom-color: $accent;
             }
         }
+    }
+}
+
+.sidebar {
+    width: 295px;
+
+    & > ul {
+        & > :not(:last-child) {
+            margin-bottom: 4px;
+        }
+
+        & > li {
+            div {
+                padding: 22px 20px;
+                background-color: #333136;
+                position: relative;
+                color: #fff;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+            }
+
+            &:has(ul) {
+                position: relative;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                a {
+                    width: calc(100% - 30px);
+                }
+            }
+
+            &[data-open] {
+                div {
+                    background-color: $accent;
+                }
+
+                svg {
+                    transform: rotate(180deg);
+                }
+
+                ul {
+                    opacity: 1;
+                    pointer-events: all;
+                    visibility: visible;
+                    max-height: fit-content;
+                    padding: 22px 20px;
+                }
+
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                width: 1em;
+                height: 1em;
+                flex: 0 0 auto;
+                color: inherit;
+
+                @media (min-width: 1201px) {
+                    margin-left: 4px;
+                }
+
+                img,
+                svg {
+                    transition: all 0.3s ease 0s;
+                    width: 10px;
+                    height: 7px;
+                }
+            }
+
+            ul {
+                padding: 0;
+                z-index: 2;
+                display: block;
+                background-color: #f8f7f7;
+                padding: 0 20px;
+
+                transition: all 0.3s ease 0s;
+
+                max-height: 0;
+                opacity: 0;
+                pointer-events: none;
+                visibility: hidden;
+
+                li {
+                    color: #6a6565;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-transform: initial;
+
+                    a {
+                        white-space: wrap;
+                    }
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            color: $accent;
+                        }
+                    }
+                }
+
+                & > :not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                    @media (max-width: 1200px) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.text__box {
+    div {
+        width: 100%;
+        position: relative;
+        @include adaptive-value("height", 500, 250, 1);
+        @include adaptive-value("margin-bottom", 40, 20, 1);
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    h3 {
+        @include adaptive-value("font-size", 32, 22, 1);
+        @include adaptive-value("margin-top", 70, 30, 1);
+    }
+
+    h3,
+    h4 {
+        color: $black;
+        @include adaptive-value("margin-bottom", 40, 20, 1);
+    }
+    p,
+    ol {
+        color: #4a4646;
+        font-size: 22px;
+        font-weight: 400;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    ol {
+        @include adaptive-value("padding-left", 50, 20, 1);
+        @include adaptive-value("margin-bottom", 40, 20, 1);
+
+        & > :not(:last-child) {
+            margin-bottom: 30px;
+            @include adaptive-value("margin-bottom", 30, 20, 1);
+        }
+
+        li {
+            list-style-type: disc;
+        }
+    }
+
+    p {
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 40, 20, 1);
+        }
+
+        &._bold {
+            font-weight: 600;
+            color: $black;
+        }
+
+        b {
+            color: $black;
+        }
+    }
+
+    a {
+        display: block;
+        color: $accent;
+        @include adaptive-value("font-size", 20, 16, 1);
+        font-weight: 400;
+        @include adaptive-value("margin-bottom", 40, 20, 1);
     }
 }

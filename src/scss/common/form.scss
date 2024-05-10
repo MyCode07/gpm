@@ -1,0 +1,103 @@
+.form {
+    & > :not(:last-child) {
+        @include adaptive-value("margin-bottom", 45, 25, 1);
+    }
+
+    // .form__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: #4a4646;
+            @include adaptive-value("font-size", 18, 14, 1);
+            font-weight: 400;
+            display: inline-block;
+            margin-bottom: 10px;
+
+            span {
+                color: $accent;
+            }
+        }
+
+        input {
+            height: 60px;
+            @media (max-width: 768px) {
+                height: 55px;
+            }
+        }
+
+        input,
+        textarea {
+            border: 1px solid #b9b9b9;
+            padding: 24px;
+            color: #919191;
+            @include adaptive-value("font-size", 18, 14, 1);
+            font-weight: 400;
+
+            @media (max-width: 768px) {
+                padding: 10px 15px;
+            }
+        }
+
+        textarea {
+            height: 210px;
+            resize: none;
+
+            @media (max-width: 768px) {
+                height: 160px;
+            }
+        }
+
+        // .form__item-select
+
+        &-select {
+            color: #919191;
+            @include adaptive-value("font-size", 18, 14, 1);
+            font-weight: 400;
+            width: 195px;
+
+            svg {
+                width: 10px;
+                transition: transform 0.3s ease 0s;
+            }
+        }
+    }
+
+    // .form__bottom
+
+    &__bottom {
+        margin-top: 15px;
+    }
+
+    .select-input {
+        height: 60px;
+        @media (max-width: 768px) {
+            height: 55px;
+        }
+
+        label {
+            margin-bottom: 0;
+        }
+    }
+
+    ._btn {
+        width: 360px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+
+.reviews-form {
+    @include adaptive-value('margin-bottom', 100, 40, 1);
+    
+    max-width: 410px;
+    width: 100%;
+
+    h3 {
+        @include adaptive-value("margin-bottom", 45, 30, 1);
+    }
+}

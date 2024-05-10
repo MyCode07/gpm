@@ -179,7 +179,8 @@
 }
 
 .pages-hero {
-    padding-top: 102px;
+    @include adaptive-value('padding-top', 100, 60, 1);
+    
     @include adaptive-value("margin-bottom", 50, 20, 1);
 
     h1 {

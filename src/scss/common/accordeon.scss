@@ -1,13 +1,79 @@
 [data-accordion] {
+    & > :not(:last-child) {
+        margin-bottom: 7px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 3px;
+        }
+    }
+
     [data-accordion-item] {
         &[data-open] {
-            & > [data-accordion-item-body] {
+            & > [data-accordion-item-content] {
                 grid-template-rows: 1fr;
+            }
+
+            & > [data-accordion-title] {
+                background-color: $black;
+                color: $white;
+                svg {
+                    transform: rotate(-90deg);
+                }
+
+                span {
+                    color: $white;
+                }
             }
         }
     }
 
-    [data-accordion-item-title] {
+    [data-accordion-title] {
+        padding: 10px 25px;
+        border: 1px solid #d9d9d9;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        transition: all 0.3s ease 0s;
+
+        @media (max-width: 1024px) {
+            padding: 5px 15px;
+        }
+
+        span {
+            color: #030303;
+            @include adaptive-value("font-size", 24, 18, 1);
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f3efef;
+            transition: background-color 0.3s ease 0s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+
+            @media (max-width: 768px) {
+                width: 35px;
+                height: 35px;
+            }
+
+            svg {
+                flex: 0 0 auto;
+                pointer-events: none;
+                fill: $black;
+                transition: transform 0.3s ease 0s;
+                width: 14px;
+                height: 12px;
+                transform: rotate(90deg);
+            }
+        }
+
         cursor: pointer;
 
         * {
@@ -15,16 +81,25 @@
         }
     }
 
-    [data-accordion-item-body] {
-        display: grid;
-        grid-template-rows: 0fr;
-        transition: grid-template-rows 0.3s;
-    }
-
     [data-accordion-item-height] {
         overflow: hidden;
+
+        div {
+            padding: 30px 25px;
+
+            @media (max-width: 1024px) {
+                padding: 15px;
+            }
+
+            p {
+                color: #4a4646;
+            }
+        }
     }
 
     [data-accordion-item-content] {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s;
     }
 }

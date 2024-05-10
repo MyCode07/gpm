@@ -21,7 +21,6 @@ if (sliders.length) {
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: "auto",
                         spaceBetween: 0,
                         slideToClickedSlide: true,
                     },
@@ -50,8 +49,6 @@ if (sliders.length) {
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        spaceBetween: "auto",
-
                     },
                     425: {
                         slidesPerView: 2,
@@ -112,8 +109,6 @@ if (sliders.length) {
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        spaceBetween: "auto",
-
                     },
                     425: {
                         slidesPerView: 2,
