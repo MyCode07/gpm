@@ -87,9 +87,6 @@
 }
 
 .manipulators {
-    @include adaptive-value("padding-top", 100, 30, 1);
-    @include adaptive-value("padding-bottom", 100, 30, 1);
-
     .grid {
         gap: 30px;
 
@@ -807,6 +804,76 @@
         &::-webkit-scrollbar {
             display: none;
         }
-      
+    }
+}
+
+.questions {
+    .section__body {
+        & > :not(:last-child) {
+            padding-bottom: 55px;
+            margin-bottom: 55px;
+            border-bottom: 1px solid #dbdbdb;
+        }
+    }
+}
+
+.contacts {
+    .grid {
+        margin-bottom: 50px;
+        gap: 100px;
+
+        @media (max-width: 768px) {
+            gap: 50px;
+        }
+
+        div {
+            & > :not(:last-child) {
+                @include adaptive-value("margin-bottom", 85, 50, 1);
+            }
+        }
+    }
+
+    ol {
+        h4 {
+            color: #4a4646;
+            @include adaptive-value("margin-bottom", 40, 24, 1);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        li {
+            &:not(:last-child) {
+                @include adaptive-value("margin-bottom", 40, 24, 1);
+            }
+
+            span {
+                display: block;
+                margin-bottom: 13px;
+                color: #4a4646;
+                font-size: 18px;
+            }
+
+            a,
+            p {
+                color: #000;
+                @include adaptive-value("font-size", 24, 18, 1);
+                font-weight: 600;
+                line-height: 1.1;
+            }
+        }
+    }
+
+    .sample-pdf {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+
+        a {
+            color: $accent;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
     }
 }

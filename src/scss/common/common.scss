@@ -623,3 +623,62 @@ table {
         @include adaptive-value("margin-bottom", 40, 20, 1);
     }
 }
+
+.info-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    gap: 7px;
+
+    li {
+        width: 50px;
+        height: 50px;
+        background-color: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777070;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent;
+                color: $white;
+            }
+        }
+
+        svg {
+            fill: currentColor;
+            width: 14px;
+            height: 10px;
+        }
+
+        a {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        &.current-page {
+            pointer-events: none;
+            background-color: $accent;
+            color: $white;
+        }
+    }
+
+    &__prev {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    // .info-navigation__next
+
+    &__next {
+    }
+}

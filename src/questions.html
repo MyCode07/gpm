@@ -1,5 +1,5 @@
 @@include('./html/head.html', {
-"title":"Отзывы",
+"title":"Вопросы",
 })
 
 @@include('./html/header.html')
@@ -18,17 +18,11 @@
                             <div></div>
                         </li>
                         <li>
-                            <a href="">
-                                <span>О компании</span>
-                            </a>
-                            <div></div>
-                        </li>
-                        <li>
-                            <span>Отзывы</span>
+                            <span>Вопросы</span>
                         </li>
                     </ul>
                 </div>
-                <h1>Отзывы</h1>
+                <h1>Вопросы</h1>
             </div>
         </div>
     </section>
@@ -37,7 +31,7 @@
         <div class="section__container _container">
             <div class="section__body">
                 <div class="reviews-form">
-                    <h3>Добавить отзыв</h3>
+                    <h3>Задать вопрос</h3>
                     <form action="" method="post" role="form" class="form">
                         <div class="form__item" data-required="">
                             <label>Имя <span>*</span></label>
@@ -45,25 +39,7 @@
                         </div>
                         <div class="form__item" data-required="">
                             <label>Оставить отзыв<span>*</span></label>
-                            <textarea name="message" placeholder="Ваш отзыв"></textarea>
-                        </div>
-
-                        <div class="form__item form__item-select">
-                            <label>Оценка</label>
-                            <div class="select-input">
-                                <label data-id="1">1</label>
-                                <svg width="10" height="6" viewBox="0 0 10 6">
-                                    <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
-                                </svg>
-                                <div class="select">
-                                    <div class="select-body">
-                                        <span data-id="0">0</span>
-                                        <span data-id="1" class="_active">1</span>
-                                        <span data-id="2">2</span>
-                                        <span data-id="3">3</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <textarea name="message" placeholder="Ваш вопрос"></textarea>
                         </div>
                         <div class="form__bottom">
                             <button class="_btn _btn-red">
@@ -77,19 +53,13 @@
         </div>
     </section>
 
-    <section class="section reviews">
+    <section class="section reviews questions">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="reviews-card">
                     <h3>Сергей Николаевич</h3>
                     <time>19.05.2015</time>
-                    <div class="reviews-card__stars">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                    </div>
+                    <h4>Вопрос:</h4>
                     <p>Большое спасибо сотрудникам компании! Я строю загородный дом, понадобилось перевезти большой
                         объем кирпича (в поддонах).
                         Компанию ГПММОСКВА нашел в интернете случайно, отзывы убедили. В общем, не пожалел: машину дали
@@ -100,17 +70,19 @@
                         ожидал. Скоро буду
                         делать крышу, воспользуюсь услугами ГПММОСКВА снова! Да и соседу, который тоже строится, вас
                         посоветовал.</p>
+                    <div class="answer">
+                        <h4>Ответ:</h4>
+                        <p>а, Анатолий, мы имеем в наличии необходимую для таких случаев технику. В парке ООО
+                            «ГПММОСКВА» есть вездеходы
+                            КамАЗ-43118, способные перевозить грузы даже в условиях тяжелого бездорожья. Они с легкостью
+                            справятся с Вашей
+                            проблемой.</p>
+                    </div>
                 </div>
                 <div class="reviews-card">
                     <h3>Сергей Николаевич</h3>
                     <time>19.05.2015</time>
-                    <div class="reviews-card__stars">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                        <img src="img/icons/star.svg" alt="">
-                    </div>
+                    <h4>Вопрос:</h4>
                     <p>Большое спасибо сотрудникам компании! Я строю загородный дом, понадобилось перевезти большой
                         объем кирпича (в поддонах).
                         Компанию ГПММОСКВА нашел в интернете случайно, отзывы убедили. В общем, не пожалел: машину дали
@@ -121,10 +93,46 @@
                         ожидал. Скоро буду
                         делать крышу, воспользуюсь услугами ГПММОСКВА снова! Да и соседу, который тоже строится, вас
                         посоветовал.</p>
+                    <div class="answer">
+                        <h4>Ответ:</h4>
+                        <p>а, Анатолий, мы имеем в наличии необходимую для таких случаев технику. В парке ООО
+                            «ГПММОСКВА» есть вездеходы
+                            КамАЗ-43118, способные перевозить грузы даже в условиях тяжелого бездорожья. Они с легкостью
+                            справятся с Вашей
+                            проблемой.</p>
+                    </div>
                 </div>
+
+                <ul class="info-navigation">
+                    <li class="info-navigation__prev">
+                        <a href="">
+                            <svg width="8" height="13" viewBox="0 0 8 13">
+                                <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="current-page">
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="">...</a>
+                    </li>
+                    <li>
+                        <a href="">2</a>
+                    </li>
+                    <li class="info-navigation__next">
+                        <a href="">
+                            <svg width="8" height="13" viewBox="0 0 8 13">
+                                <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
+
+    @@include('./html/manipulators.html')
 
 </main>
 

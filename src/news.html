@@ -1,0 +1,88 @@
+@@include('./html/head.html', {
+"title":"Новости",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="section pages-hero">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Главная</span>
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>Новости</span>
+                        </li>
+                    </ul>
+                </div>
+                <h1>Новости</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section news">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid grid-4">
+                    <div class="news-card">
+                        <a href="" class="news-card__name">Новая техника CIFA для российских строек</a>
+                        <a href="" class="_btn _btn-accentstroke">читать</a>
+                    </div>
+                    <div class="news-card">
+                        <a href="" class="news-card__name">Новая техника CIFA для российских строек</a>
+                        <a href="" class="_btn _btn-accentstroke">читать</a>
+                    </div>
+                    <div class="news-card">
+                        <a href="" class="news-card__name">Новая техника CIFA для российских строек</a>
+                        <a href="" class="_btn _btn-accentstroke">читать</a>
+                    </div>
+                    <div class="news-card">
+                        <a href="" class="news-card__name">Новая техника CIFA для российских строек</a>
+                        <a href="" class="_btn _btn-accentstroke">читать</a>
+                    </div>
+                </div>
+
+                <ul class="info-navigation">
+                    <li class="info-navigation__prev">
+                        <a href="">
+                            <svg width="8" height="13" viewBox="0 0 8 13">
+                                <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="current-page">
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="">...</a>
+                    </li>
+                    <li>
+                        <a href="">2</a>
+                    </li>
+                    <li class="info-navigation__next">
+                        <a href="">
+                            <svg width="8" height="13" viewBox="0 0 8 13">
+                                <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/manipulators.html')
+
+    @@include('./html/map.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

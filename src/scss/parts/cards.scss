@@ -374,20 +374,30 @@
             font-size: 16px;
         }
     }
-    div {
+
+    // .reviews-card__stars
+    &__stars {
         display: flex;
         align-items: center;
         gap: 5px;
-        
+
         svg,
         img {
             width: 18px;
             height: 18px;
         }
     }
+
     p {
         margin-top: 22px;
         @include adaptive-value("font-size", 22, 16, 1);
         color: #4a4646;
+    }
+
+    .answer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 35px;
+        @include adaptive-value("padding-left", 60, 30, 1);
     }
 }
