@@ -51,7 +51,7 @@
 
         @media (max-width: 768px) {
             display: flex;
-            gap: 7px;
+            gap: 0;
         }
     }
 }
@@ -656,23 +656,24 @@
 
     .filters-area {
         margin-bottom: 48px;
-        border-top: 4px solid $accent;
-        padding-top: 24px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 30px;
-        background-color: #fbfbfb;
 
-        @media (max-width: 1024px) {
-            padding: 30px 16px;
+        &__body {
+            @media (min-width: 1025px) {
+                padding: 24px 30px 30px 30px;
+            }
         }
 
         .grid {
             gap: 15px;
+            grid-template-columns: repeat(3, 1fr);
 
             @media (max-width: 1200px) {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 24px 7px;
+            }
+
+            &:not(._active) > :nth-child(n + 4) {
+                display: none;
             }
         }
     }
@@ -773,6 +774,10 @@
             width: 100%;
         }
     }
+
+    h2 {
+        text-align: left;
+    }
 }
 
 .prices {
@@ -782,7 +787,7 @@
 
     td {
         font-size: 18px;
-        min-width: unset;
+        min-width: 62px;
 
         @media (max-width: 1024px) {
             font-size: 14px;

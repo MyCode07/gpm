@@ -19,28 +19,23 @@ if (sliders.length) {
                 autoplay: {
                     delay: 3000,
                 },
-                breakpoints: {
-                    320: {
-                        spaceBetween: 0,
-                        slideToClickedSlide: true,
-                    },
-                    425: {
-                        slidesPerView: 2,
-                        spaceBetween: 0,
-                        slideToClickedSlide: true,
-                    }
-                }
+                spaceBetween: 7
             })
         }
-        if (slider.closest('.service-slider-0')) {
+        if (slider.closest('.service-tabs')) {
+            const tab = slider.closest('.tab-content')
+            let prev = tab.querySelector('.prev')
+            let next = tab.querySelector('.next')
+            let pagination = tab.querySelector('.pagination')
+
             new Swiper(slider, {
                 modules: [Autoplay, Navigation, Pagination],
                 navigation: {
-                    nextEl: '.service-slider-0 .next',
-                    prevEl: '.service-slider-0 .prev',
+                    nextEl: next,
+                    prevEl: prev,
                 },
                 pagination: {
-                    el: '.service-slider-0 .pagination',
+                    el: pagination,
                     clickable: true,
                 },
                 autoplay: {
@@ -49,6 +44,7 @@ if (sliders.length) {
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
+                        spaceBetween: 20,
                     },
                     425: {
                         slidesPerView: 2,
@@ -62,23 +58,22 @@ if (sliders.length) {
                 }
             })
         }
-        if (slider.closest('.service-slider-1')) {
+
+        if (slider.closest('.product-tabs')) {
+            const tab = slider.closest('.tab-content')
+            let prev = tab.querySelector('.prev')
+            let next = tab.querySelector('.next')
+
             new Swiper(slider, {
-                modules: [Autoplay, Navigation, Pagination],
+                modules: [Navigation],
                 navigation: {
-                    nextEl: '.service-slider-1 .next',
-                    prevEl: '.service-slider-1 .prev',
-                },
-                pagination: {
-                    el: '.service-slider-1 .pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 3000,
+                    nextEl: next,
+                    prevEl: prev,
                 },
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
+                        spaceBetween: 20,
                     },
                     425: {
                         slidesPerView: 2,
@@ -88,40 +83,10 @@ if (sliders.length) {
                         slidesPerView: 3,
                         spaceBetween: 43,
                     },
-
                 }
             })
         }
-        if (slider.closest('.service-slider-2')) {
-            new Swiper(slider, {
-                modules: [Autoplay, Navigation, Pagination],
-                navigation: {
-                    nextEl: '.service-slider-2 .next',
-                    prevEl: '.service-slider-2 .prev',
-                },
-                pagination: {
-                    el: '.service-slider-2 .pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 3000,
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1,
-                    },
-                    425: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 43,
-                    },
 
-                }
-            })
-        }
         if (slider.closest('.works-slider') && window.innerWidth <= 768) {
             new Swiper(slider, {
                 modules: [Autoplay, Pagination],

@@ -1,13 +1,13 @@
 .filters-area {
     margin-bottom: 48px;
 
-    ._container {
+    // .filters-area__body
+
+    &__body {
         border-top: 4px solid $accent;
-        padding-top: 24px;
-        padding-left: 54px;
-        padding-right: 54px;
-        padding-bottom: 30px;
         background-color: #fbfbfb;
+
+        padding: 24px 54px 30px 54px;
 
         @media (max-width: 1024px) {
             padding: 30px 16px;
@@ -39,19 +39,13 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
 
-        & > :last-child {
-            display: none;
-        }
-
         @media (max-width: 1024px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 24px 7px;
         }
 
-        &._active {
-            & > :last-child {
-                display: block;
-            }
+        &:not(._active) > :nth-child(n + 5) {
+            display: none;
         }
     }
 
@@ -64,7 +58,7 @@
 
     position: relative;
 
-    ._more {
+    .more-filters {
         margin-top: 18px;
         color: $accent;
         font-size: 16px;
@@ -89,7 +83,7 @@
     top: 100%;
     transform: translate(0, 10px);
     border: 1px solid #b9b9b9;
-    z-index: 1;
+    z-index: 2;
     background-color: $white;
     padding: 18px 15px 35px 26px;
 

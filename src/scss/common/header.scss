@@ -74,7 +74,7 @@
             background-color: $gray;
             z-index: 10;
             transform: translate(101%, 0);
-            height: 100vw;
+            height: calc(100vh - 46px);
             margin-bottom: 100px;
             transition: transform 0.3s ease 0s;
 
