@@ -895,15 +895,17 @@
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 1.1;
-                margin-bottom: 46px;
+                @include adaptive-value("margin-bottom", 46, 20, 1);
+
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
             }
 
-            .form__bottom{
+            .form__bottom {
                 display: flex;
                 align-items: center;
                 gap: 30px;
-
-                
             }
         }
     }
@@ -912,6 +914,12 @@
         display: block;
         color: $accent;
         font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
     }
 
     .filters {
@@ -924,9 +932,17 @@
                 &:not(._active) > :nth-child(n + 5) {
                     display: block;
                 }
+
+                @media (max-width: 768px) {
+                    display: block;
+                    & > :not(:last-child) {
+                        margin-bottom: 28px;
+                    }
+                }
             }
 
             .filter-text {
+                margin-top: 20px;
                 grid-column: span 3;
                 width: fit-content;
                 background: #e7fae6;
@@ -940,12 +956,28 @@
         // .filters-checkboxes
 
         &-checkboxes {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            @include adaptive-value("margin-bottom", 40, 30, 1);
+
             &:has(#rejs:checked) + .grid {
                 .filter-text,
                 .filter-smena,
                 .filter-hours {
                     display: none;
                 }
+            }
+
+            input {
+                accent-color: $accent;
+            }
+
+            span {
+                color: $black;
+                @include adaptive-value("font-size", 18, 14, 1);
+                font-weight: 600;
+                line-height: 1.1;
             }
         }
     }
@@ -956,13 +988,17 @@
         background-color: #fbfbfb;
         gap: 35px;
         max-width: 752px;
-        margin-bottom: 54px;
+        @include adaptive-value("margin-bottom", 54, 30, 1);
+
+        @media (max-width: 768px) {
+            gap: 28px;
+            padding: 10px;
+        }
 
         // .truck-img
 
         &-img {
-            width: 231px;
-
+            @include adaptive-value("width", 231, 91, 1);
             img,
             picture {
                 height: auto;
@@ -978,6 +1014,11 @@
                 margin-bottom: 13px;
                 line-height: 1.2;
                 font-size: 17px;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    margin-bottom: 9px;
+                }
             }
 
             span {
@@ -986,19 +1027,34 @@
                 font-weight: 700;
                 line-height: 1.1;
                 color: $accent;
+
+                @media (max-width: 768px) {
+                    font-size: 22px;
+                }
             }
         }
     }
 
     .form {
+        max-width: 752px;
+        width: 100%;
+
+        &__row {
+            width: 100%;
+        }
+
         // .form__item
 
         &__item {
+            width: 100%;
         }
 
         // .form__bottom
 
         &__bottom {
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
         }
     }
 }
