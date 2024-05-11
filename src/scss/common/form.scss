@@ -1,6 +1,19 @@
 .form {
-    & > :not(:last-child) {
+    // .form__row
+
+    &__row {
+        display: flex;
+        gap: 20px;
+
         @include adaptive-value("margin-bottom", 45, 25, 1);
+
+        .form__item {
+            margin-bottom: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     // .form__item
@@ -8,6 +21,8 @@
     &__item {
         display: flex;
         flex-direction: column;
+
+        @include adaptive-value("margin-bottom", 45, 25, 1);
 
         label {
             color: #4a4646;
@@ -92,8 +107,8 @@
 }
 
 .reviews-form {
-    @include adaptive-value('margin-bottom', 100, 40, 1);
-    
+    @include adaptive-value("margin-bottom", 100, 40, 1);
+
     max-width: 410px;
     width: 100%;
 

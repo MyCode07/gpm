@@ -1,0 +1,248 @@
+@@include('./html/head.html', {
+"title":"Калькулятор",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="section pages-hero">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Главная</span>
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>Калькулятор</span>
+                        </li>
+                    </ul>
+                </div>
+                <h1>Калькулятор</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section calculator">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="calculator-filter">
+                    <div class="filters-area">
+                        <div class="filters-checkboxes">
+                            <label for="rejs">
+                                <input type="radio" id="rejs" name="service" value="Рейс" checked>
+                                <span>Рейс</span>
+                            </label>
+                            <label for="smena">
+                                <input type="radio" id="smena" name="service" value="Рейс">
+                                <span>Смена</span>
+                            </label>
+                        </div>
+                        <div class="grid">
+                            <div class="filter-fast filter-bort">
+                                <p>По борту:</p>
+                                <div class="select-input">
+                                    <label data-id="1">Все</label>
+                                    <svg width="10" height="6" viewBox="0 0 10 6">
+                                        <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                    </svg>
+                                    <div class="select">
+                                        <div class="select-body">
+                                            <span data-id="0" class="_active">Все</span>
+                                            <span data-id="1">Краснодарский край</span>
+                                            <span data-id="2">Белгородская область</span>
+                                            <span data-id="3">Брянская область</span>
+                                            <span data-id="4">Владимирская область</span>
+                                            <span data-id="5">Вологодская область</span>
+                                            <span data-id="6">Ивановская область</span>
+                                            <span data-id="7">Калужская область</span>
+                                            <span data-id="8">Костромская область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-fast filter-cabine">
+                                <p>Длина кузова:</p>
+                                <div class="select-input">
+                                    <label data-id="1">Все</label>
+                                    <svg width="10" height="6" viewBox="0 0 10 6">
+                                        <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                    </svg>
+                                    <div class="select">
+                                        <div class="select-body">
+                                            <span data-id="0" class="_active">Все</span>
+                                            <span data-id="1">Краснодарский край</span>
+                                            <span data-id="2">Белгородская область</span>
+                                            <span data-id="3">Брянская область</span>
+                                            <span data-id="4">Владимирская область</span>
+                                            <span data-id="5">Вологодская область</span>
+                                            <span data-id="6">Ивановская область</span>
+                                            <span data-id="7">Калужская область</span>
+                                            <span data-id="8">Костромская область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-fast filter-gruzopodemnost">
+                                <p>Грузоподъемность стрелы:</p>
+                                <div class="select-input">
+                                    <label data-id="1">Все</label>
+                                    <svg width="10" height="6" viewBox="0 0 10 6">
+                                        <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                    </svg>
+                                    <div class="select">
+                                        <div class="select-body">
+                                            <span data-id="0" class="_active">Все</span>
+                                            <span data-id="1">Краснодарский край</span>
+                                            <span data-id="2">Белгородская область</span>
+                                            <span data-id="3">Брянская область</span>
+                                            <span data-id="4">Владимирская область</span>
+                                            <span data-id="5">Вологодская область</span>
+                                            <span data-id="6">Ивановская область</span>
+                                            <span data-id="7">Калужская область</span>
+                                            <span data-id="8">Костромская область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-fast filter-vyletstrely">
+                                <p>Вылет стрелы:</p>
+                                <div class="select-input">
+                                    <label data-id="1">Все</label>
+                                    <svg width="10" height="6" viewBox="0 0 10 6">
+                                        <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                    </svg>
+                                    <div class="select">
+                                        <div class="select-body">
+                                            <span data-id="0" class="_active">Все</span>
+                                            <span data-id="1">Краснодарский край</span>
+                                            <span data-id="2">Белгородская область</span>
+                                            <span data-id="3">Брянская область</span>
+                                            <span data-id="4">Владимирская область</span>
+                                            <span data-id="5">Вологодская область</span>
+                                            <span data-id="6">Ивановская область</span>
+                                            <span data-id="7">Калужская область</span>
+                                            <span data-id="8">Костромская область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-fast filter-mkad">
+                                <p>Расстояние от МКАД:</p>
+                                <div class="select-input">
+                                    <label data-id="1">Все</label>
+                                    <svg width="10" height="6" viewBox="0 0 10 6">
+                                        <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                    </svg>
+                                    <div class="select">
+                                        <div class="select-body">
+                                            <span data-id="0" class="_active">Все</span>
+                                            <span data-id="1">Краснодарский край</span>
+                                            <span data-id="2">Белгородская область</span>
+                                            <span data-id="3">Брянская область</span>
+                                            <span data-id="4">Владимирская область</span>
+                                            <span data-id="5">Вологодская область</span>
+                                            <span data-id="6">Ивановская область</span>
+                                            <span data-id="7">Калужская область</span>
+                                            <span data-id="8">Костромская область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-text">При заказе 10 смен манипулятора одиннадцатая смена бесплатно.</div>
+                            <div class="filter-fast filter-smena">
+                                <p>Количество смен:</p>
+                                <div class="select-input">
+                                    <label data-id="1">Все</label>
+                                    <svg width="10" height="6" viewBox="0 0 10 6">
+                                        <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                    </svg>
+                                    <div class="select">
+                                        <div class="select-body">
+                                            <span data-id="0" class="_active">Все</span>
+                                            <span data-id="1">Краснодарский край</span>
+                                            <span data-id="2">Белгородская область</span>
+                                            <span data-id="3">Брянская область</span>
+                                            <span data-id="4">Владимирская область</span>
+                                            <span data-id="5">Вологодская область</span>
+                                            <span data-id="6">Ивановская область</span>
+                                            <span data-id="7">Калужская область</span>
+                                            <span data-id="8">Костромская область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-fast filter-hours">
+                                <p>Часов переработки:</p>
+                                <div class="select-input">
+                                    <label data-id="1">Все</label>
+                                    <svg width="10" height="6" viewBox="0 0 10 6">
+                                        <use xlink:href="img/svg/icons.svg#filter-arrow"></use>
+                                    </svg>
+                                    <div class="select">
+                                        <div class="select-body">
+                                            <span data-id="0" class="_active">Все</span>
+                                            <span data-id="1">Краснодарский край</span>
+                                            <span data-id="2">Белгородская область</span>
+                                            <span data-id="3">Брянская область</span>
+                                            <span data-id="4">Владимирская область</span>
+                                            <span data-id="5">Вологодская область</span>
+                                            <span data-id="6">Ивановская область</span>
+                                            <span data-id="7">Калужская область</span>
+                                            <span data-id="8">Костромская область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-filter__results">
+                        <label>Вам подойдет:</label>
+                        <div class="truck">
+                            <div class="truck-img">
+                                <img src="img/prod-card.png" alt="">
+                            </div>
+                            <div>
+                                <h3>Манипулятор FOTON 1093</h3>
+                                <div class="price">
+                                    <label>Стоимость:</label>
+                                    <span>6 000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form">
+                            <form action="#">
+                                <div class="form__row">
+                                    <div class="form__item" data-required="">
+                                        <label>Имя <span>*</span></label>
+                                        <input type="text" name="name" placeholder="Введите ваше имя">
+                                    </div>
+                                    <div class="form__item" data-required="">
+                                        <label>Ваш телефон<span>*</span></label>
+                                        <input type="text" name="phone" class="_mask-phone"
+                                            placeholder="+7 (___) ___-__-__">
+                                    </div>
+                                </div>
+                                <div class="form__bottom">
+                                    <button class="_btn _btn-red">
+                                        <div>Заказать</div>
+                                    </button>
+                                    <a href="#" class="clear-filters">сбросить</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

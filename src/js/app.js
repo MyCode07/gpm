@@ -1,20 +1,14 @@
-// import { maskInputs } from "./static/inputmask.js";
-// import { replaceDomElements } from "./static/replace.js";
-// import { animateAction, animateStaggerAction } from "./parts/animations.js";
+import { maskInputs } from "./static/inputmask.js";
 import { accorden } from "./static/accordeon.js";
-// import "./parts/popup.js";
+import "./parts/popup.js";
 import "./parts/menu.js";
 import "./parts/filters.js";
 import "./parts/sliders.js";
 import "./parts/tabs.js";
 import "./static/accordeon.js";
-// import "./parts/more-photos.js";
 
 accorden();
-// animateAction();
-// animateStaggerAction();
-// replaceDomElements();
-// maskInputs('+7 (999) 999-99-99', '._mask-phone')
+maskInputs('+7 (999) 999-99-99', '._mask-phone')
 
 import { Fancybox } from "@fancyapps/ui";
 Fancybox.bind("[data-fancybox]", {

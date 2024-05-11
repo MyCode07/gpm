@@ -882,3 +882,123 @@
         }
     }
 }
+
+.calculator {
+    // .calculator-filter
+
+    &-filter {
+        // .calculator-filter__results
+
+        &__results {
+            label {
+                display: block;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.1;
+                margin-bottom: 46px;
+            }
+
+            .form__bottom{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                
+            }
+        }
+    }
+
+    .clear-filters {
+        display: block;
+        color: $accent;
+        font-weight: 700;
+    }
+
+    .filters {
+        // .filters-area
+
+        &-area {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+
+                &:not(._active) > :nth-child(n + 5) {
+                    display: block;
+                }
+            }
+
+            .filter-text {
+                grid-column: span 3;
+                width: fit-content;
+                background: #e7fae6;
+                padding: 10px 20px;
+                color: #00963c;
+
+                @include adaptive-value("font-size", 20, 14, 1);
+            }
+        }
+
+        // .filters-checkboxes
+
+        &-checkboxes {
+            &:has(#rejs:checked) + .grid {
+                .filter-text,
+                .filter-smena,
+                .filter-hours {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .truck {
+        display: flex;
+        padding: 20px;
+        background-color: #fbfbfb;
+        gap: 35px;
+        max-width: 752px;
+        margin-bottom: 54px;
+
+        // .truck-img
+
+        &-img {
+            width: 231px;
+
+            img,
+            picture {
+                height: auto;
+            }
+        }
+
+        .price {
+            margin-top: 24px;
+
+            label {
+                display: block;
+                color: #4a4646;
+                margin-bottom: 13px;
+                line-height: 1.2;
+                font-size: 17px;
+            }
+
+            span {
+                display: block;
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 1.1;
+                color: $accent;
+            }
+        }
+    }
+
+    .form {
+        // .form__item
+
+        &__item {
+        }
+
+        // .form__bottom
+
+        &__bottom {
+        }
+    }
+}
