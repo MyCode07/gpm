@@ -109,6 +109,7 @@
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+
                 & > a {
                     white-space: nowrap;
                 }
@@ -170,7 +171,7 @@
 
                         @media (max-width: 1200px) {
                             padding-top: 16px;
-                            max-height: fit-content;
+                            max-height: 100vh;
                         }
                     }
 
@@ -208,7 +209,7 @@
                     transition: all 0.3s ease 0s;
                     opacity: 0;
                     pointer-events: none;
-                    visibility: hidden;
+                    overflow: hidden;
 
                     @media (min-width: 1201px) {
                         min-width: 279px;
@@ -222,6 +223,7 @@
                     @media (max-width: 1200px) {
                         width: 100%;
                         max-height: 0;
+                        opacity: 1;
                     }
 
                     li {
