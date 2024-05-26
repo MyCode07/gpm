@@ -707,7 +707,8 @@
             }
         }
 
-        ol {
+        ol,
+        ul {
             padding-left: 22px;
 
             & > :not(:last-child) {
@@ -980,7 +981,8 @@
                 line-height: 1.1;
             }
 
-            label,input {
+            label,
+            input {
                 cursor: pointer;
             }
         }
@@ -1060,5 +1062,11 @@
                 flex-direction: column;
             }
         }
+    }
+}
+
+.reviews-list {
+    & > :not(:last-child) {
+        @include adaptive-value("margin-bottom", 50, 25, 1);
     }
 }

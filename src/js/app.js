@@ -6,7 +6,9 @@ import "./parts/filters.js";
 import "./parts/sliders.js";
 import "./parts/tabs.js";
 import "./static/accordeon.js";
+import { playVideoAction } from "./parts/video.js";
 
+playVideoAction();
 accorden();
 maskInputs('+7 (999) 999-99-99', '._mask-phone')
 

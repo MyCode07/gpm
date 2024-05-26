@@ -660,7 +660,7 @@ table {
     }
 }
 
-.info-navigation {
+ul.page-numbers {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -668,8 +668,11 @@ table {
     margin-right: auto;
     margin-top: 70px;
     gap: 7px;
+}
 
-    li {
+.page-numbers {
+    a,
+    span {
         width: 50px;
         height: 50px;
         background-color: #f4f4f4;
@@ -693,19 +696,19 @@ table {
             height: 10px;
         }
 
-        a {
-            font-size: 16px;
-            font-weight: 700;
-            line-height: normal;
-            text-transform: uppercase;
-        }
-
-        &.current-page {
-            pointer-events: none;
-            background-color: $accent;
-            color: $white;
-        }
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
     }
+
+    span {
+        background-color: $accent;
+        color: $white;
+        cursor: default;
+    }
+
+    // .page-numbers__prev
 
     &__prev {
         svg {
@@ -713,7 +716,7 @@ table {
         }
     }
 
-    // .info-navigation__next
+    // .page-numbers__next
 
     &__next {
     }
