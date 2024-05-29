@@ -49,11 +49,9 @@
     // .header__logo
 
     &__logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        position: relative;
 
-        width: 126px;
         @include adaptive-value("width", 126, 76, 1);
         height: 100%;
         background-color: $accent;
@@ -69,9 +67,18 @@
         }
 
         img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: 100%;
             object-fit: contain;
+
+            max-height: 60px;
+            @media (max-width: 1024px) {
+                max-height: 36px;
+            }
         }
     }
 
@@ -83,14 +90,19 @@
             padding: 43px 16px 116px 16px;
             position: absolute;
             left: 0;
-            top: 46px;
+            top: 76px;
             width: 100%;
             background-color: $gray;
             z-index: 10;
             transform: translate(101%, 0);
-            height: calc(100vh - 46px);
+            height: calc(100vh - 76px);
             margin-bottom: 100px;
             transition: transform 0.3s ease 0s;
+
+            @media (max-width: 1024px) {
+                height: calc(100vh - 46px);
+                top: 46px;
+            }
 
             &._open {
                 transform: translate(0, 0);
@@ -300,6 +312,7 @@
             }
 
             .menu-logo {
+                display: block;
                 width: 80px;
                 height: 60px;
             }
