@@ -516,7 +516,7 @@
 
 .news {
     .grid {
-        gap: 30px;
+        gap: 50px 30px;
         margin-bottom: 50px;
 
         @media (max-width: 768px) {
@@ -1097,4 +1097,8 @@
     & > :not(:last-child) {
         @include adaptive-value("margin-bottom", 50, 25, 1);
     }
+}
+
+.sidebar > ul > li ul li button {
+    display: none !important;
 }

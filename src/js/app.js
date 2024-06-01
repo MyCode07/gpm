@@ -7,10 +7,12 @@ import "./parts/sliders.js";
 import "./parts/tabs.js";
 import "./static/accordeon.js";
 import { playVideoAction } from "./parts/video.js";
+import { stickyWhatsApp } from "./parts/header.js";
 
 playVideoAction();
 accorden();
 maskInputs('+7 (999) 999-99-99', '._mask-phone')
+stickyWhatsApp();
 
 import { Fancybox } from "@fancyapps/ui";
 Fancybox.bind("[data-fancybox]", {

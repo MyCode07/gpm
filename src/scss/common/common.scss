@@ -311,6 +311,7 @@ table {
         @media (max-width: 768px) {
             padding: 10px;
             font-size: 12px;
+            min-width: 120px;
         }
 
         &:not(:first-child) {
@@ -760,7 +761,8 @@ ul.page-numbers {
     }
 
     @media (max-width: 1200px) {
-        top: 525px;
+        top: unset;
+        bottom: 30px;
     }
 
     @media (any-hover: hover) {
@@ -777,6 +779,12 @@ ul.page-numbers {
     align-items: center;
     gap: 8px;
 
+    &._sticky {
+        span {
+            display: none;
+        }
+    }
+
     div {
         display: flex;
         align-items: center;
@@ -788,8 +796,6 @@ ul.page-numbers {
         flex: 0 0 auto;
 
         @media (max-width: 1200px) {
-            width: 68px;
-            height: 68px;
         }
 
         img,
@@ -802,8 +808,6 @@ ul.page-numbers {
             object-fit: contain;
 
             @media (max-width: 1200px) {
-                width: 44px;
-                height: 44px;
             }
         }
     }
