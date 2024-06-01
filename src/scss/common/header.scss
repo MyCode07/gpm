@@ -138,7 +138,9 @@
 
                 & > a {
                     white-space: nowrap;
+                    width: fit-content;
                 }
+
 
                 @media (max-width: 1200px) {
                     height: fit-content;
@@ -168,7 +170,9 @@
                     }
 
                     a {
-                        width: calc(100% - 30px);
+                        @media (max-width: 1200px) {
+                            width: calc(100% - 30px);
+                        }
                     }
                 }
 
@@ -216,9 +220,6 @@
                     flex: 0 0 auto;
                     color: inherit;
 
-                    @media (min-width: 1201px) {
-                        margin-left: 4px;
-                    }
 
                     img,
                     svg {
@@ -254,7 +255,7 @@
 
                     li {
                         color: #fff;
-                        font-size: 14px;
+                        font-size: 16px;
                         font-style: normal;
                         font-weight: 400;
                         text-transform: initial;

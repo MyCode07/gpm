@@ -35,6 +35,16 @@
         &-right {
         }
     }
+
+    &.filters-section {
+        margin-bottom: 48px !important;
+
+        @media (max-width: 1200px) {
+            border-top: 4px solid $accent;
+            background-color: #fbfbfb;
+            padding: 30px 0px;
+        }
+    }
 }
 
 .products {
@@ -198,6 +208,9 @@
         @include adaptive-value("padding-right", 67, 15, 1);
         position: relative;
     }
+    .swiper-slide {
+        height: auto;
+    }
 }
 
 .advantages {
@@ -296,6 +309,11 @@
         align-items: center;
         justify-content: center;
         gap: 40px;
+        background-color: #fbfbfb;
+        @include adaptive-value("padding-top", 38, 28, 1);
+        @include adaptive-value("padding-bottom", 38, 28, 1);
+        @include adaptive-value("padding-left", 62, 15, 1);
+        @include adaptive-value("padding-right", 62, 15, 1);
 
         @media (max-width: 768px) {
             gap: 25px;
@@ -538,6 +556,16 @@
         li {
             border: 1px solid #dcdada;
             padding: 15px;
+            transition: all 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $accent;
+                    * {
+                        color: $white;
+                    }
+                }
+            }
 
             a {
                 text-align: center;

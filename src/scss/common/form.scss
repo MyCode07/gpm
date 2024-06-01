@@ -38,6 +38,7 @@
 
         input {
             height: 60px;
+
             @media (max-width: 768px) {
                 height: 55px;
             }
@@ -47,7 +48,7 @@
         textarea {
             border: 1px solid #b9b9b9;
             padding: 24px;
-            color: #919191;
+            color: $black;
             @include adaptive-value("font-size", 18, 14, 1);
             font-weight: 400;
 

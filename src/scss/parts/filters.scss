@@ -1,16 +1,14 @@
 .filters-area {
     margin-bottom: 48px;
 
+
     // .filters-area__body
 
     &__body {
-        border-top: 4px solid $accent;
-        background-color: #fbfbfb;
-
-        padding: 24px 54px 30px 54px;
-
-        @media (max-width: 1024px) {
-            padding: 30px 16px;
+        @media (min-width: 1201px) {
+            background-color: #fbfbfb;
+            padding: 24px 54px 30px 54px;
+            border-top: 4px solid $accent;
         }
     }
 
@@ -105,6 +103,7 @@
         align-items: center;
         justify-content: space-between;
         border: 1px solid #b9b9b9;
+        background-color: $white;
 
         transition: border-color 0.3s ease 0s;
 
@@ -159,7 +158,7 @@
         }
 
         &::-webkit-scrollbar {
-            width: 4px;
+            width: 2px;
             background: $white;
         }
 

@@ -1,5 +1,5 @@
 .product-card {
-    padding: 36px 10px 30px;
+    padding: 36px 18px 30px;
     border: 1px solid #dbdbdb;
     background: #fff;
     overflow: hidden;
@@ -143,6 +143,10 @@
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
     border: 1px solid #dbdbdb;
 
     // .service-card__img
@@ -167,6 +171,10 @@
     // .service-card__info
 
     &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 auto;
         padding: 0 25px 30px 25px;
 
         @media (max-width: 768px) {
@@ -182,6 +190,7 @@
         line-height: 1.1;
         margin-top: 30px;
         margin-bottom: 50px;
+        flex: 1 1 auto;
 
         @media (max-width: 768px) {
             font-size: 16px;

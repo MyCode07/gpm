@@ -106,6 +106,17 @@ h4 {
         display: flex;
         align-items: center;
         gap: 7px;
+        overflow-x: auto;
+
+        @media (max-width: 1200px) {
+            width: 100vw;
+            margin-left: -16px;
+            padding-inline: 16px;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         li {
             display: flex;
@@ -117,6 +128,7 @@ h4 {
                 color: #919191;
                 font-size: 12px;
                 font-weight: 400;
+                white-space: nowrap;
             }
             div {
                 width: 3px;
@@ -733,5 +745,78 @@ ul.page-numbers {
         z-index: 2;
         background-color: rgba($color: $white, $alpha: 0.75);
         cursor: no-drop;
+    }
+}
+
+.fixed-media {
+    position: fixed;
+    right: 40px;
+    top: 200px;
+    z-index: 10;
+    transition: opacity 0.3s ease 0s;
+
+    @media (max-width: 1440px) {
+        right: 16px;
+    }
+
+    @media (max-width: 1200px) {
+        top: 525px;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    * {
+        pointer-events: none;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        background-color: #25d366;
+        flex: 0 0 auto;
+
+        @media (max-width: 1200px) {
+            width: 68px;
+            height: 68px;
+        }
+
+        img,
+        svg {
+            position: relative;
+            left: 1px;
+            top: -1px;
+            width: 37px;
+            height: 37px;
+            object-fit: contain;
+
+            @media (max-width: 1200px) {
+                width: 44px;
+                height: 44px;
+            }
+        }
+    }
+
+    span {
+        color: $white;
+        font-family: Exo2;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.1;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 }

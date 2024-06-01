@@ -47,7 +47,7 @@ if (sliders.length) {
                         spaceBetween: 20,
                     },
                     425: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 20,
                     },
                     768: {

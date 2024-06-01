@@ -72,16 +72,16 @@
         }
 
         a {
-            transition: all 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
 
             @media (any-hover: hover) {
                 &:hover {
-                    text-decoration: underline;
+                    opacity: 0.7;
                 }
             }
         }
     }
-
+ 
     // .hero__bottom
 
     &__bottom {
