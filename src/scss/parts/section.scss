@@ -669,7 +669,7 @@
             color: #4a4646;
 
             &:not(:last-child) {
-                @include adaptive-value("margin-bottom", 50, 25, 1);
+                margin-bottom: 1em;
             }
         }
     }

@@ -824,3 +824,18 @@ ul.page-numbers {
         }
     }
 }
+
+.tab-content .swiper-slide {
+    height: auto !important;
+}
+
+
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+.tab-content {
+    position: relative;
+}
