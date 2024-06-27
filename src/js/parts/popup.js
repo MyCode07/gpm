@@ -2,7 +2,6 @@ import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
 
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
-    console.log(targetEl);
 
     if (targetEl.hasAttribute('data-open-popup')) {
         e.preventDefault();

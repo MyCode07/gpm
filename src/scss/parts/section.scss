@@ -60,8 +60,20 @@
         gap: 30px 22px;
 
         @media (max-width: 768px) {
-            display: flex;
-            gap: 0;
+            &:not(._active) > :nth-child(n + 6) {
+                display: none;
+            }
+        }
+    }
+
+    .show-more {
+        display: none;
+        margin-top: 30px;
+
+        @media (max-width: 768px) {
+            margin-inline: auto;
+            width: 100%;
+            display: block;
         }
     }
 }
@@ -97,6 +109,10 @@
 }
 
 .manipulators {
+    background-color: #fbfbfb;
+    @include adaptive-value("padding-top", 83, 28, 1);
+    @include adaptive-value("padding-bottom", 123, 75, 1);
+
     .grid {
         gap: 30px;
 

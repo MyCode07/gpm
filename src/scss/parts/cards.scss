@@ -13,10 +13,6 @@
         padding: 16px 16px 30px;
     }
 
-    @media (max-width: 425px) {
-        width: 285px;
-    }
-
     @media (any-hover: hover) {
         &:hover {
             box-shadow: 0px 5px 30px 10px rgba(195, 195, 195, 0.25);

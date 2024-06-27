@@ -5,6 +5,7 @@ import "./parts/menu.js";
 import "./parts/filters.js";
 import "./parts/sliders.js";
 import "./parts/tabs.js";
+import "./parts/more-click.js";
 import "./static/accordeon.js";
 import { playVideoAction } from "./parts/video.js";
 import { stickyWhatsApp } from "./parts/header.js";

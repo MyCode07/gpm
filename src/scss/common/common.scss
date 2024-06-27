@@ -608,16 +608,23 @@ table {
         @include adaptive-value("margin-bottom", 40, 20, 1);
     }
 
+    h1 {
+        margin-bottom: 1em;
+    }
+
+    h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
         text-align: left;
+        color: $black;
     }
 
     p,
-    ol {
+    ol,
+    ul {
         color: #4a4646;
         font-size: 22px;
         font-weight: 400;
@@ -627,18 +634,23 @@ table {
         }
     }
 
-    ol {
-        @include adaptive-value("padding-left", 50, 20, 1);
+    ol,
+    ul {
+        @include adaptive-value("padding-left", 40, 20, 1);
         @include adaptive-value("margin-bottom", 40, 20, 1);
 
         & > :not(:last-child) {
             margin-bottom: 30px;
             @include adaptive-value("margin-bottom", 30, 20, 1);
         }
+    }
 
-        li {
-            list-style-type: disc;
-        }
+    ol li {
+        list-style-type: decimal;
+    }
+
+    ul li {
+        list-style-type: disc;
     }
 
     p {
@@ -828,8 +840,6 @@ ul.page-numbers {
 .tab-content .swiper-slide {
     height: auto !important;
 }
-
-
 
 .swiper-button-disabled {
     opacity: 0.5;
